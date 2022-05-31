@@ -8,6 +8,7 @@ class Main extends Component {
       firstName: { text: "" },
       lastName: { text: "" },
       email: { text: "" },
+      number: { text: "" },
     };
   }
 
@@ -21,8 +22,6 @@ class Main extends Component {
     this.setState({
       lastName: { text: e.target.value },
     });
-
-    console.log(this.state);
   };
 
   handleEmailChange = (e) => {
@@ -31,8 +30,14 @@ class Main extends Component {
     });
   };
 
+  handleNumberChange = (e) => {
+    this.setState({
+      number: { text: e.target.value },
+    });
+  };
+
   render() {
-    const { firstName, lastName, email } = this.state;
+    const { firstName, lastName, email, number } = this.state;
     return (
       <GeneralInfo
         firstName={firstName.text}
@@ -41,6 +46,8 @@ class Main extends Component {
         lastNameChange={this.handleLastNameChange}
         email={email.text}
         emailChange={this.handleEmailChange}
+        number={number.text}
+        numberChange={this.handleNumberChange}
       ></GeneralInfo>
     );
   }

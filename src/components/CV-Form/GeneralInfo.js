@@ -32,6 +32,15 @@ const GeneralInfo = (props) => {
             onChange={props.emailChange}
           ></input>
         </div>
+        <div>
+          <label htmlFor="phone-number">Phone Number</label>
+          <input
+            type="number"
+            id="phone-number"
+            value={props.number}
+            onChange={props.numberChange}
+          ></input>
+        </div>
       </form>
     </div>
   );
