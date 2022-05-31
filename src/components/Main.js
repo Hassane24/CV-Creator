@@ -5,19 +5,24 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
-      name: {
-        text: "",
-      },
-      email: {
-        text: "",
-      },
+      firstName: { text: "" },
+      lastName: { text: "" },
+      email: { text: "" },
     };
   }
 
-  handleNameInput = (e) => {
+  handleFirstNameChange = (e) => {
     this.setState({
-      name: { text: e.target.value },
+      firstName: { text: e.target.value },
     });
+  };
+
+  handleLastNameChange = (e) => {
+    this.setState({
+      lastName: { text: e.target.value },
+    });
+
+    console.log(this.state);
   };
 
   handleEmailChange = (e) => {
@@ -27,11 +32,14 @@ class Main extends Component {
   };
 
   render() {
+    const { firstName, lastName, email } = this.state;
     return (
       <GeneralInfo
-        name={this.state.name.text}
-        nameChange={this.handleNameInput}
-        email={this.state.email.text}
+        firstName={firstName.text}
+        firstNameChange={this.handleFirstNameChange}
+        lastName={lastName.text}
+        lastNameChange={this.handleLastNameChange}
+        email={email.text}
         emailChange={this.handleEmailChange}
       ></GeneralInfo>
     );
