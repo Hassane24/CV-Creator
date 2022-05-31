@@ -8,6 +8,9 @@ class Main extends Component {
       name: {
         text: "",
       },
+      email: {
+        text: "",
+      },
     };
   }
 
@@ -17,11 +20,19 @@ class Main extends Component {
     });
   };
 
+  handleEmailChange = (e) => {
+    this.setState({
+      email: { text: e.target.value },
+    });
+  };
+
   render() {
     return (
       <GeneralInfo
         name={this.state.name.text}
         nameChange={this.handleNameInput}
+        email={this.state.email.text}
+        emailChange={this.handleEmailChange}
       ></GeneralInfo>
     );
   }
