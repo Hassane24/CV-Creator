@@ -41,6 +41,14 @@ const GeneralInfo = (props) => {
             onChange={props.numberChange}
           ></input>
         </div>
+        <div>
+          <label htmlFor="description">Description</label>
+          <textarea
+            id="description"
+            value={props.description}
+            onChange={props.descriptionChange}
+          ></textarea>
+        </div>
       </form>
     </div>
   );

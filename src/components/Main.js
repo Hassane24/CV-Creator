@@ -9,35 +9,33 @@ class Main extends Component {
       lastName: { text: "" },
       email: { text: "" },
       number: { text: "" },
+      description: { text: "" },
     };
   }
 
   handleFirstNameChange = (e) => {
-    this.setState({
-      firstName: { text: e.target.value },
-    });
+    this.setState({ firstName: { text: e.target.value } });
   };
 
   handleLastNameChange = (e) => {
-    this.setState({
-      lastName: { text: e.target.value },
-    });
+    this.setState({ lastName: { text: e.target.value } });
   };
 
   handleEmailChange = (e) => {
-    this.setState({
-      email: { text: e.target.value },
-    });
+    this.setState({ email: { text: e.target.value } });
   };
 
   handleNumberChange = (e) => {
-    this.setState({
-      number: { text: e.target.value },
-    });
+    this.setState({ number: { text: e.target.value } });
+  };
+
+  handleDescriptionChange = (e) => {
+    this.setState({ description: { text: e.target.value } });
+    console.log(this.state);
   };
 
   render() {
-    const { firstName, lastName, email, number } = this.state;
+    const { firstName, lastName, email, number, description } = this.state;
     return (
       <GeneralInfo
         firstName={firstName.text}
@@ -48,6 +46,8 @@ class Main extends Component {
         emailChange={this.handleEmailChange}
         number={number.text}
         numberChange={this.handleNumberChange}
+        description={description.text}
+        descriptionChange={this.handleDescriptionChange}
       ></GeneralInfo>
     );
   }
