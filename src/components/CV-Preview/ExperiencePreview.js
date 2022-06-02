@@ -11,6 +11,8 @@ const ExperiencePreview = (props) => {
       <div>
         <span>Position:{props.position}</span>
         <span>Company:{props.company}</span>
+        <h4>Description</h4>
+        <span>{props.description}</span>
       </div>
     </div>
   );

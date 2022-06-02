@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import GeneralInfo from "./CV-Form/GeneralInfo";
 import Education from "./CV-Form/Education";
 import Experience from "./CV-Form/Experience";
+import Preview from "./CV-Preview/Preview";
 
 class Main extends Component {
   constructor() {
@@ -172,6 +173,23 @@ class Main extends Component {
             toChange={this.handleToExChange}
           ></Experience>
         </form>
+        <Preview
+          firstName={general.firstName.text}
+          lastName={general.lastName.text}
+          number={general.number.text}
+          job={experience.position.text}
+          position={experience.position.text}
+          to={experience.to.text}
+          company={experience.company.text}
+          toEd={education.to.text}
+          email={general.email.text}
+          description={general.description.text}
+          fromEd={education.from.text}
+          uni={education.university.text}
+          degree={education.degree.text}
+          from={experience.from.text}
+          subject={education.subject.text}
+        ></Preview>
       </div>
     );
   }
