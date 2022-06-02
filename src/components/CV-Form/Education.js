@@ -1,4 +1,4 @@
-function Education(props) {
+const Education = (props) => {
   return (
     <div>
       <h2>Education</h2>
@@ -49,6 +49,6 @@ function Education(props) {
       </div>
     </div>
   );
-}
+};
 
 export default Education;

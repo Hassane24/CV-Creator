@@ -6,97 +6,127 @@ class Main extends Component {
   constructor() {
     super();
     this.state = {
-      // general state
-      firstName: { text: "" },
-      lastName: { text: "" },
-      email: { text: "" },
-      number: { text: "" },
-      description: { text: "" },
-      // education state
-      university: { text: "" },
-      degree: { text: "" },
-      subject: { text: "" },
-      from: { text: "" },
-      to: { text: "" },
+      // General state
+      general: {
+        firstName: { text: "" },
+        lastName: { text: "" },
+        email: { text: "" },
+        number: { text: "" },
+        description: { text: "" },
+      },
+      // Education state
+      education: {
+        university: { text: "" },
+        degree: { text: "" },
+        subject: { text: "" },
+        from: { text: "" },
+        to: { text: "" },
+      },
+      // Experience state
+      experience: {
+        position: { text: "" },
+        company: { text: "" },
+        from: { text: "" },
+        to: { text: "" },
+      },
     };
   }
 
+  // General section event handlers
+
   handleFirstNameChange = (e) => {
-    this.setState({ firstName: { text: e.target.value } });
+    this.setState((prevState) => ({
+      general: { ...prevState.general, firstName: { text: e.target.value } },
+    }));
   };
 
   handleLastNameChange = (e) => {
-    this.setState({ lastName: { text: e.target.value } });
+    this.setState((prevState) => ({
+      general: { ...prevState.general, lastName: { text: e.target.value } },
+    }));
   };
 
   handleEmailChange = (e) => {
-    this.setState({ email: { text: e.target.value } });
+    this.setState((prevState) => ({
+      general: { ...prevState.general, email: { text: e.target.value } },
+    }));
   };
 
   handleNumberChange = (e) => {
-    this.setState({ number: { text: e.target.value } });
+    this.setState((prevState) => ({
+      general: { ...prevState.general, number: { text: e.target.value } },
+    }));
   };
 
   handleDescriptionChange = (e) => {
-    this.setState({ description: { text: e.target.value } });
+    this.setState((prevState) => ({
+      general: { ...prevState.general, description: { text: e.target.value } },
+    }));
   };
+
+  // Education section event handlers
 
   handleUniChange = (e) => {
-    this.setState({ university: { text: e.target.value } });
+    this.setState((prevState) => ({
+      education: {
+        ...prevState.education,
+        university: { text: e.target.value },
+      },
+    }));
   };
   handleDegreeChange = (e) => {
-    this.setState({ degree: { text: e.target.value } });
+    this.setState((prevState) => ({
+      education: { ...prevState.education, degree: { text: e.target.value } },
+    }));
   };
   handleSubjectChange = (e) => {
-    this.setState({ subject: { text: e.target.value } });
+    this.setState((prevState) => ({
+      education: { ...prevState.education, subject: { text: e.target.value } },
+    }));
   };
   handleFromChange = (e) => {
-    this.setState({ from: { text: e.target.value } });
+    this.setState((prevState) => ({
+      education: { ...prevState.education, from: { text: e.target.value } },
+    }));
+    console.log(this.state);
   };
   handleToChange = (e) => {
-    this.setState({ to: { text: e.target.value } });
+    this.setState((prevState) => ({
+      education: { ...prevState.education, to: { text: e.target.value } },
+    }));
   };
 
+  // Experience section event handlers
+
   render() {
-    const {
-      firstName,
-      lastName,
-      email,
-      number,
-      description,
-      university,
-      degree,
-      subject,
-      from,
-      to,
-    } = this.state;
+    const { general, education, experience } = this.state;
     return (
-      <form>
+      <div>
         <GeneralInfo
-          firstName={firstName.text}
+          firstName={general.firstName.text}
           firstNameChange={this.handleFirstNameChange}
-          lastName={lastName.text}
+          lastName={general.lastName.text}
           lastNameChange={this.handleLastNameChange}
-          email={email.text}
+          email={general.email.text}
           emailChange={this.handleEmailChange}
-          number={number.text}
+          number={general.number.text}
           numberChange={this.handleNumberChange}
-          description={description.text}
+          description={general.description.text}
           descriptionChange={this.handleDescriptionChange}
         ></GeneralInfo>
         <Education
-          uni={university.text}
+          uni={education.university.text}
           uniChange={this.handleUniChange}
-          degree={degree.text}
+          degree={education.degree.text}
           degreeChange={this.handleDegreeChange}
-          subject={subject.text}
+          subject={education.subject.text}
           subjectChange={this.handleSubjectChange}
-          from={from.text}
+          from={education.from.text}
           fromChange={this.handleFromChange}
-          to={to.text}
+          to={education.to.text}
           toChange={this.handleToChange}
         ></Education>
-      </form>
+      </div>
     );
   }
 }
