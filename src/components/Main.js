@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import GeneralInfo from "./CV-Form/GeneralInfo";
 import Education from "./CV-Form/Education";
+import Experience from "./CV-Form/Experience";
 
 class Main extends Component {
   constructor() {
@@ -74,22 +75,25 @@ class Main extends Component {
       },
     }));
   };
+
   handleDegreeChange = (e) => {
     this.setState((prevState) => ({
       education: { ...prevState.education, degree: { text: e.target.value } },
     }));
   };
+
   handleSubjectChange = (e) => {
     this.setState((prevState) => ({
       education: { ...prevState.education, subject: { text: e.target.value } },
     }));
   };
+
   handleFromChange = (e) => {
     this.setState((prevState) => ({
       education: { ...prevState.education, from: { text: e.target.value } },
     }));
-    console.log(this.state);
   };
+
   handleToChange = (e) => {
     this.setState((prevState) => ({
       education: { ...prevState.education, to: { text: e.target.value } },
@@ -98,10 +102,40 @@ class Main extends Component {
 
   // Experience section event handlers
 
+  handlePositionChange = (e) => {
+    this.setState((prevState) => ({
+      experience: {
+        ...prevState.experience,
+        position: { text: e.target.value },
+      },
+    }));
+  };
+
+  handleCompanyChange = (e) => {
+    this.setState((prevState) => ({
+      experience: {
+        ...prevState.experience,
+        company: { text: e.target.value },
+      },
+    }));
+  };
+
+  handleFromExChange = (e) => {
+    this.setState((prevState) => ({
+      experience: { ...prevState.experience, from: { text: e.target.value } },
+    }));
+  };
+
+  handleToExChange = (e) => {
+    this.setState((prevState) => ({
+      experience: { ...prevState.experience, to: { text: e.target.value } },
+    }));
+  };
+
   render() {
     const { general, education, experience } = this.state;
     return (
-      <div>
+      <form>
         <GeneralInfo
           firstName={general.firstName.text}
           firstNameChange={this.handleFirstNameChange}
@@ -126,7 +160,17 @@ class Main extends Component {
           to={education.to.text}
           toChange={this.handleToChange}
         ></Education>
-      </div>
+        <Experience
+          position={experience.position.text}
+          positionChange={this.handlePositionChange}
+          company={experience.company.text}
+          companyChange={this.handleCompanyChange}
+          from={experience.from.text}
+          fromChange={this.handleFromExChange}
+          to={experience.to.text}
+          toChange={this.handleToExChange}
+        ></Experience>
+      </form>
     );
   }
 }
