@@ -1,6 +1,8 @@
+import "../../styles/form-styles/GeneralInfo.css";
+
 const GeneralInfo = (props) => {
   return (
-    <div>
+    <div className="general-info">
       <h2>General Info</h2>
       <div>
         <label htmlFor="first-name">First Name</label>
