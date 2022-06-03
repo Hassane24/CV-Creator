@@ -1,0 +1,41 @@
+.preview {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.general {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.exp-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.from-to {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.uni-deg-sub {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}

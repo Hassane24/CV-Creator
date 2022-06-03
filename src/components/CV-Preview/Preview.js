@@ -1,9 +1,10 @@
 import FullName from "./FullName";
 import ExperiencePreview from "./ExperiencePreview";
 import EducationPreview from "./EducationPreview";
+import "../../styles/preview-styles/Preview.css";
 const Preview = (props) => {
   return (
-    <div>
+    <div className="preview">
       <FullName
         firstName={props.firstName}
         lastName={props.lastName}

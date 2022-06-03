@@ -1,11 +1,11 @@
 const ExperiencePreview = (props) => {
   return (
-    <div>
+    <div className="exp-container">
       <h3>Experience</h3>
-      <div>
+      <div className="experience">
         <span>Years of experience</span>
         <span>
-          From:{props.from} To:{props.to}
+          From: {props.from} To: {props.to}
         </span>
       </div>
       <div>
