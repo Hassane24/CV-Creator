@@ -1,6 +1,7 @@
+import "../../styles/form-styles/Education.css";
 const Education = (props) => {
   return (
-    <div>
+    <div className="education">
       <h2>Education</h2>
       <div>
         <label htmlFor="university">University Name</label>
