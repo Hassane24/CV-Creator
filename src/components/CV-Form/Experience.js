@@ -1,6 +1,7 @@
+import "../../styles/form-styles/Experience.css";
 const Experience = (props) => {
   return (
-    <div>
+    <div className="exp">
       <h2>Experience</h2>
       <div>
         <label htmlFor="position">Position</label>

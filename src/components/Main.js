@@ -166,7 +166,11 @@ class Main extends Component {
             from={experience.from.text}
             subject={education.subject.text}
           ></Preview>
-          <button type="submit" onClick={this.handleOnSubmit}>
+          <button
+            className="edit-btn"
+            type="submit"
+            onClick={this.handleOnSubmit}
+          >
             Edit your CV
           </button>
         </div>
@@ -209,7 +213,11 @@ class Main extends Component {
               to={experience.to.text}
               toChange={this.handleToExChange}
             ></Experience>
-            <button type="submit" onClick={this.handleOnSubmit}>
+            <button
+              className="check-btn"
+              type="submit"
+              onClick={this.handleOnSubmit}
+            >
               Check your CV
             </button>
           </form>

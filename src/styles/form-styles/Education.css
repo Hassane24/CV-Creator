@@ -1,3 +1,27 @@
 .education {
-  background-color: black;
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  color: black;
+}
+
+.education > div {
+  width: 80%;
+}
+
+.education > div > input {
+  width: 100%;
+  border: 2px solid black;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.education > div > input:hover {
+  transform: scale(103%);
+  transition: 200ms ease-in-out;
 }

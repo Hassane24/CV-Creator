@@ -1,6 +1,30 @@
 .main {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1rem;
   background-color: rgb(14 165 233);
+  height: 75vh;
+}
+
+.check-btn {
+  background-color: #cbd5e1;
+  width: 13%;
+  padding: 10px 0;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.check-btn:hover {
+  transform: scale(103%);
+  transition: 200ms ease-in-out;
+}
+
+.edit-btn {
+  align-self: flex-start;
+  padding: 5px 0;
+  background-color: #cbd5e1;
+  width: 90px;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
