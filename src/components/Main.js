@@ -3,6 +3,7 @@ import GeneralInfo from "./CV-Form/GeneralInfo";
 import Education from "./CV-Form/Education";
 import Experience from "./CV-Form/Experience";
 import Preview from "./CV-Preview/Preview";
+import Form from "../styles/form-styles/Form.css";
 
 class Main extends Component {
   constructor() {
