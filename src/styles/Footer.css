@@ -1,0 +1,18 @@
+.footer {
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: white;
+  height: 10vh;
+  color: rgb(14 165 233);
+  display: flex;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+}
+
+.footer > img:hover {
+  transform: rotate(360deg);
+  transition: 1000ms cubic-bezier(1, 0.01, 0, 0.97);
+  cursor: pointer;
+}

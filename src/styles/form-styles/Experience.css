@@ -21,3 +21,7 @@
   transform: scale(103%);
   transition: 200ms ease-in-out;
 }
+
+.exp > div > input:focus-visible {
+  outline: none;
+}

@@ -25,3 +25,7 @@ h2 {
   transform: scale(103%);
   transition: 200ms ease-in-out;
 }
+
+.education > div > input:focus-visible {
+  outline: none;
+}

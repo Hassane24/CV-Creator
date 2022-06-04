@@ -36,3 +36,7 @@ h2 {
 .general-info > div > input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.general-info > div > input:focus-visible {
+  outline: none;
+}
