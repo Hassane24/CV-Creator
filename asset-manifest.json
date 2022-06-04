@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/CV-Creator/static/css/main.751bc11f.css",
+    "main.js": "/CV-Creator/static/js/main.9c15f9b3.js",
+    "static/media/github.svg": "/CV-Creator/static/media/github.4cd3a2bc790226c346ae943ec1622139.svg",
+    "index.html": "/CV-Creator/index.html",
+    "main.751bc11f.css.map": "/CV-Creator/static/css/main.751bc11f.css.map",
+    "main.9c15f9b3.js.map": "/CV-Creator/static/js/main.9c15f9b3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.751bc11f.css",
+    "static/js/main.9c15f9b3.js"
+  ]
+}
