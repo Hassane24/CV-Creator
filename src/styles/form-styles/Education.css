@@ -19,6 +19,7 @@ h2 {
   border: 2px solid black;
   height: 30px;
   border-radius: 5px;
+  font-size: 1rem;
 }
 
 .education > div > input:hover {
